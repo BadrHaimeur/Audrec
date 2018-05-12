@@ -1,0 +1,29 @@
+{
+  "name": "Audrec",
+  "version": "1.0.0",
+  "description": "Audrec is a web audio recorder library that makes it easy for a web developer to record users' voices in all major modern browsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Audrec",
+    "recorder",
+    "web",
+    "recorder",
+    "webrtc",
+    "audio",
+    "cross-browser"
+  ],
+  "author": "Badr Haimeur <badr@haimeur.com> (http://www.haimeur.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "docdash": "^0.4.0",
+    "gulp": "^3.9.1",
+    "gulp-ext": "^1.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-uglify": "^3.0.0",
+    "jsdoc": "^3.5.5"
+  }
+}
