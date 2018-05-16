@@ -2,7 +2,9 @@ var gulp = require('gulp'),
     uglify_js = require('gulp-uglify'),
     include = require('gulp-file-include'),
     extension = require('gulp-ext'),
-    jsdoc = require('gulp-jsdoc3');
+    jsdoc = require('gulp-jsdoc3'),
+    fs = require('fs'),
+    join = require('path').join;
 
 
 gulp.task('build', [
@@ -36,6 +38,7 @@ gulp.task('minify', function() {
 });
 
 gulp.task('document', function (cb) {
+    clearDir( '_doc' );
     var config = require('./jsdoc.json');
     gulp.src(['./_dist/audrec.js'], {read: false})
         .pipe(jsdoc(config, cb));
@@ -45,6 +48,38 @@ gulp.task('document', function (cb) {
 /**********************************************
  * Utility functions :
  **********************************************/
+/**
+ * Deletes all files in a directory including its
+ * subdirectories.
+ * @param {string} dirname A directory name.
+ */
+function clearDir( dirname ) {
+    fs.readdir(
+        dirname,
+        (error, files) => {
+            if ( error ) {
+                logError( error );
+            } else {
+
+                files.forEach( function( file ) {
+                    if ( !file.includes('.') ) {
+                        clearDir( join(dirname, file) );
+                    } else {
+                        fs.unlink(
+                            join(dirname, file),
+                            error => {
+                                if (error) {
+                                    logError( error );
+                                }
+                            }
+                        );
+                    }
+                } );
+
+            }
+        }
+    );
+}
 
 /**
  * Logs errors in the console .
