@@ -5,22 +5,22 @@ var path = 'timer.ctor.js';
 /**
  * A timer callback.
  * @callback Audrec~timerCallback
- * @param {integer} spent_milliseconds A number that represents the spent
- * milliseconds.
- * @param {integer} milliseconds_left A number that represents how many
- * milliseconds left.
+ * @param {integer} spent_milliseconds The number of spent milliseconds.
+ * @param {integer} milliseconds_left The number of milliseconds left.
  * @param {float} percentage The progress of the current timer.
  */
 
 /**
- * Calls a function repeatedly for a specific amount of time.
- * @param {Audrec~timerCallback} callback A function to be called repeatedly.
+ * Creates a timer instance that calls a function repeatedly for a specific
+ * amount of time.
+ * @param {Audrec~timerCallback} callback A callback to be executed repeatedly.
  * @param {integer} [max_duration=420000] The maximum duration in
  * milliseconds (The default is 7 minutes).
  * @param {integer} [interval=50] The number of milliseconds between every
  * callback call.
  * @constructor
  * @memberof Audrec
+ * @inner
  */
 function Timer( callback, max_duration, interval  ) {
     if ( !(this instanceof Timer) ) {
@@ -35,7 +35,7 @@ function Timer( callback, max_duration, interval  ) {
         var thrower = 'Timer( callback, max_duration, interval  )';
 
         if ( typeof callback !== 'function' ) {
-            throwError( {
+            modules.utils.throwError( {
                 thrower: thrower,
                 file: path,
                 message: 'The parameter "callback" must be a function.'
@@ -43,7 +43,7 @@ function Timer( callback, max_duration, interval  ) {
         }
 
         if ( typeof max_duration > 9 ) {
-            throwError( {
+            modules.utils.throwError( {
                 thrower: thrower,
                 file: path,
                 message: 'The parameter "max_duration" must be an integer greater than 9.'
@@ -51,7 +51,7 @@ function Timer( callback, max_duration, interval  ) {
         }
 
         if ( typeof max_duration >= interval ) {
-            throwError( {
+            modules.utils.throwError( {
                 thrower: thrower,
                 file: path,
                 message: 'The parameter "max_duration" must be an integer greater than or equal to ' + interval + '.'
@@ -90,9 +90,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Starts counting down.
-     * @return {Audrec.Timer} The current instance.
-     * @memberof Audrec.Timer
-     * @instance
+     * @return {Audrec~Timer} The current instance.
+     * @memberof Audrec~Timer
+     * @inner
      */
     function start() {
         if ( status === Timer.STATUS.INACTIVE ) {
@@ -105,9 +105,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Pauses the current timer.
-     * @return {Audrec.Timer} The current instance.
-     * @memberof Audrec.Timer
-     * @instance
+     * @return {Audrec~Timer} The current instance.
+     * @memberof Audrec~Timer
+     * @inner
      */
     function pause() {
         if ( status === Timer.STATUS.ACTIVE ) {
@@ -120,9 +120,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Continues the countdown.
-     * @return {Audrec.Timer} The current instance.
-     * @memberof Audrec.Timer
-     * @instance
+     * @return {Audrec~Timer} The current instance.
+     * @memberof Audrec~Timer
+     * @inner
      */
     function resume() {
         if ( status === Timer.STATUS.PAUSED ) {
@@ -135,9 +135,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Stops the current timer.
-     * @return {Audrec.Timer} The current instance.
-     * @memberof Audrec.Timer
-     * @instance
+     * @return {Audrec~Timer} The current instance.
+     * @memberof Audrec~Timer
+     * @inner
      */
     function stop() {
         if ( status !== Timer.STATUS.INACTIVE ) {
@@ -151,14 +151,15 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Returns the current timer's status.
-     * @return {Audrec.Timer.STATUS} The current status.
-     * @memberof Audrec.Timer
-     * @instance
+     * @return {Audrec~Timer.STATUS} The current status.
+     * @memberof Audrec~Timer
+     * @inner
      */
     function getStatus() {
         return status;
     }
 
+    // API :
     this.start = start;
     this.pause = pause;
     this.resume = resume;
@@ -170,7 +171,7 @@ function Timer( callback, max_duration, interval  ) {
  * The timer status.
  * @enum {string}
  * @readonly
- * @memberof Audrec
+ * @static
  */
 Timer.STATUS = {
     /** The timer is inactive. */
