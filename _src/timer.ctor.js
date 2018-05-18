@@ -4,7 +4,7 @@ var path = 'timer.ctor.js';
 
 /**
  * A timer callback.
- * @callback Audrec~timerCallback
+ * @callback Audrec~modules~timerCallback
  * @param {integer} spent_milliseconds The number of spent milliseconds.
  * @param {integer} milliseconds_left The number of milliseconds left.
  * @param {float} percentage The progress of the current timer.
@@ -13,14 +13,15 @@ var path = 'timer.ctor.js';
 /**
  * Creates a timer instance that calls a function repeatedly for a specific
  * amount of time.
- * @param {Audrec~timerCallback} callback A callback to be executed repeatedly.
+ * @param {Audrec~modules~timerCallback} callback A callback to be executed
+ * repeatedly.
  * @param {integer} [max_duration=420000] The maximum duration in
  * milliseconds (The default is 7 minutes).
  * @param {integer} [interval=50] The number of milliseconds between every
  * callback call.
  * @constructor
- * @memberof Audrec
- * @inner
+ * @memberof Audrec~modules
+ * @static
  */
 function Timer( callback, max_duration, interval  ) {
     if ( !(this instanceof Timer) ) {
@@ -90,9 +91,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Starts counting down.
-     * @return {Audrec~Timer} The current instance.
-     * @memberof Audrec~Timer
-     * @inner
+     * @return {Audrec~modules.Timer} The current instance.
+     * @memberof Audrec~modules.Timer
+     * @instance
      */
     function start() {
         if ( status === Timer.STATUS.INACTIVE ) {
@@ -105,9 +106,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Pauses the current timer.
-     * @return {Audrec~Timer} The current instance.
-     * @memberof Audrec~Timer
-     * @inner
+     * @return {Audrec~modules.Timer} The current instance.
+     * @memberof Audrec~modules.Timer
+     * @instance
      */
     function pause() {
         if ( status === Timer.STATUS.ACTIVE ) {
@@ -120,9 +121,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Continues the countdown.
-     * @return {Audrec~Timer} The current instance.
-     * @memberof Audrec~Timer
-     * @inner
+     * @return {Audrec~modules.Timer} The current instance.
+     * @memberof Audrec~modules.Timer
+     * @instance
      */
     function resume() {
         if ( status === Timer.STATUS.PAUSED ) {
@@ -135,9 +136,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Stops the current timer.
-     * @return {Audrec~Timer} The current instance.
-     * @memberof Audrec~Timer
-     * @inner
+     * @return {Audrec~modules.Timer} The current instance.
+     * @memberof Audrec~modules.Timer
+     * @instance
      */
     function stop() {
         if ( status !== Timer.STATUS.INACTIVE ) {
@@ -151,9 +152,9 @@ function Timer( callback, max_duration, interval  ) {
 
     /**
      * Returns the current timer's status.
-     * @return {Audrec~Timer.STATUS} The current status.
-     * @memberof Audrec~Timer
-     * @inner
+     * @return {Audrec~modules.Timer.STATUS} The current status.
+     * @memberof Audrec~modules.Timer
+     * @instance
      */
     function getStatus() {
         return status;
