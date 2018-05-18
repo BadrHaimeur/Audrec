@@ -4,9 +4,14 @@
  */
 (function ( namespace, debug ) {
 
+/**
+ * Modules namespace.
+ * @namespace
+ * @memberof Audrec
+ * @inner
+ */
 var modules = {};
 
-debug = debug || true;
 
 // Polyfills:
 @@include('./polyfills.js')
@@ -17,33 +22,11 @@ debug = debug || true;
 // Constructors:
 @@include('./timer.ctor.js')
 @@include('./audrec.ctor.js')
+@@include('./pubsub.ctor.js')
 
 // API:
-/*
-utilities :
-millisecondsToTime
-timeToMilliseconds
+namespace.Audrec = modules.Audrec;
+namespace.Audrec.millisecondsToTime = modules.utils.millisecondsToTime;
+namespace.Audrec.timeToMilliseconds = modules.utils.timeToMilliseconds;
 
-Methods :
-requestMic
-requestMicrophone
-dismissMic
-dismissMicrophone
-getStatus
-start
-pause
-resume
-stop
-
-Events :
-start
-recording
-pause
-resume
-stop
-microphoneAvailable
-error
-*/
-
-
-} )( window, true ); // ( namespace, debug )
+} )( this, true ); // ( namespace, debug )
