@@ -1,0 +1,54 @@
+h1, h5 {
+    margin: 0;
+}
+
+h6 {
+    color: #666;
+}
+#container {
+    max-width: 500px;
+    min-width: 360px;
+    width: 500px;
+    padding: 30px;
+    margin-top: 20px;
+}
+#container > .logo {
+	display: block;
+	margin: auto;
+	padding: 0;
+}
+#container > .mic.buttons {
+	margin-top: 20px;
+}
+#container > .audrec {
+    text-align: center;
+    background-color: #FBFBFB !important;
+}
+#container > .audrec > .control {
+    margin-bottom: 7px;
+}
+#container > .audrec > progress {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    background-color: #e0e1e2;
+}
+#records {
+    height: 150px;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#container > .footer {
+    color: #666;
+    font-size: 11px;
+}
+#records > .record {
+    border: 1px #ccc solid;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+#records audio {
+    margin-bottom: 2px;
+    width: 100%;
+}

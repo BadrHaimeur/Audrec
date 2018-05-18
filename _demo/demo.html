@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Meta data -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+
+<!-- Document title -->
+<title>Audrec Demo - Simple Audio Recorder</title>
+
+
+
+
+<!-- Styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+<link rel="stylesheet" href="main.css">
+
+
+
+</head>
+<body>
+<!-- Main contents -->
+<div id="container" class="ui raised center aligned container segment">
+
+	<img class="logo" src="logo.png" alt="Audrec">
+
+    <h1>Audrec Demo</h1>
+    <h5>[ Simple Audio Recorder ]</h5>
+
+    <div class="ui basic mic fluid buttons">
+		<button class="ui request button">Request Mic</button>
+		<button class="ui dismiss button">Dismiss Mic</button>
+	</div>
+    <div class="ui segment audrec">
+        <div class="ui icon control buttons">
+            <button class="ui record button"><i class="microphone icon"></i></button>
+            <button class="ui pause button"><i class="pause icon"></i></button>
+            <button class="ui stop button"><i class="stop icon"></i></button>
+        </div>
+        <progress class="progressbar" value="0" max="100"></progress>
+        <div class="time label">00:00</div>
+
+    </div>
+
+    <div id="records" class="ui center aligned segment"></div>
+    <div class="footer">
+        <a href="http://www.haimeur.com">Badr Haimeur</a> |
+        Copyright&copy;2018
+    </div>
+
+</div>
+
+
+
+<!-- Scripts -->
+<script src="../_dist/audrec.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
+
+
+</body>
+</html>
