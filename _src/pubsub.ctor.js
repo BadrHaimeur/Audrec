@@ -6,8 +6,8 @@ var path = 'pubsub.ctor.js';
  * Creates a Publisher/Subsciber instance.
  * @param {string[]} event_types A list of event types to be supported.
  * @constructor
- * @memberof Audrec
- * @inner
+ * @memberof Audrec~modules
+ * @static
  */
 function Pubsub( event_types ) {
     if ( !(this instanceof Pubsub) ) {
@@ -49,8 +49,8 @@ function Pubsub( event_types ) {
      * The event type must be supported. )
      * @param  {function} eventHandler An event handler that listens to
      * the specified event type.
-     * @memberof Audrec~Pubsub
-     * @inner
+     * @memberof Audrec~modules.Pubsub
+     * @instance
      */
     function on( type, eventHandler ) {
         var thrower = 'Pubsub#on( type, eventHandler )';
@@ -89,8 +89,8 @@ function Pubsub( event_types ) {
      * Unsubscribes an event handler from a specific event type.
      * @param {string} type An event type to unsubscribe from.
      * @param {function} eventHandler The event handler to be unsubscribed.
-     * @memberof Audrec~Pubsub
-     * @inner
+     * @memberof Audrec~modules.Pubsub
+     * @instance
      */
     function off( type, eventHandler ) {
         var thrower = 'Pubsub#off( type, eventHandler )',
@@ -152,8 +152,8 @@ function Pubsub( event_types ) {
      * handler.
      * @param  {object} [this_value=null] The value of "this" inside the event
      * handler.
-     * @memberof Audrec~Pubsub
-     * @inner
+     * @memberof Audrec~modules.Pubsub
+     * @instance
      */
     function trigger( type, args, this_value ) {
         var thrower = 'Pubsub#trigger( type, args, this_value )';
