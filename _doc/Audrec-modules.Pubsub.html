@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pubsub - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Audrec.Audrec.html">Audrec</a><ul class='methods'><li data-type='method'><a href="Audrec.Audrec.html#.millisecondsToTime">millisecondsToTime</a></li><li data-type='method'><a href="Audrec.Audrec.html#.timeToMilliseconds">timeToMilliseconds</a></li><li data-type='method'><a href="Audrec.Audrec.html#dismissMic">dismissMic</a></li><li data-type='method'><a href="Audrec.Audrec.html#dismissMicrophone">dismissMicrophone</a></li><li data-type='method'><a href="Audrec.Audrec.html#getStatus">getStatus</a></li><li data-type='method'><a href="Audrec.Audrec.html#off">off</a></li><li data-type='method'><a href="Audrec.Audrec.html#on">on</a></li><li data-type='method'><a href="Audrec.Audrec.html#pause">pause</a></li><li data-type='method'><a href="Audrec.Audrec.html#requestMic">requestMic</a></li><li data-type='method'><a href="Audrec.Audrec.html#requestMicrophone">requestMicrophone</a></li><li data-type='method'><a href="Audrec.Audrec.html#resume">resume</a></li><li data-type='method'><a href="Audrec.Audrec.html#start">start</a></li><li data-type='method'><a href="Audrec.Audrec.html#stop">stop</a></li></ul></li><li><a href="Audrec-modules.Pubsub.html">Pubsub</a><ul class='methods'><li data-type='method'><a href="Audrec-modules.Pubsub.html#off">off</a></li><li data-type='method'><a href="Audrec-modules.Pubsub.html#on">on</a></li><li data-type='method'><a href="Audrec-modules.Pubsub.html#trigger">trigger</a></li></ul></li><li><a href="Audrec-modules.Timer.html">Timer</a><ul class='methods'><li data-type='method'><a href="Audrec-modules.Timer.html#getStatus">getStatus</a></li><li data-type='method'><a href="Audrec-modules.Timer.html#pause">pause</a></li><li data-type='method'><a href="Audrec-modules.Timer.html#resume">resume</a></li><li data-type='method'><a href="Audrec-modules.Timer.html#start">start</a></li><li data-type='method'><a href="Audrec-modules.Timer.html#stop">stop</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="Audrec.Audrec.html#~event:error">error</a></li><li><a href="Audrec.Audrec.html#~event:microphoneAvailable">microphoneAvailable</a></li><li><a href="Audrec.Audrec.html#~event:microphoneDismissed">microphoneDismissed</a></li><li><a href="Audrec.Audrec.html#~event:pause">pause</a></li><li><a href="Audrec.Audrec.html#~event:recording">recording</a></li><li><a href="Audrec.Audrec.html#~event:resume">resume</a></li><li><a href="Audrec.Audrec.html#~event:start">start</a></li><li><a href="Audrec.Audrec.html#~event:stop">stop</a></li></ul><h3>Namespaces</h3><ul><li><a href="Audrec.html">Audrec</a></li><li><a href="Audrec-modules.html">modules</a></li><li><a href="Audrec-modules.utils.html">utils</a><ul class='methods'><li data-type='method'><a href="Audrec-modules.utils.html#.isChrome">isChrome</a></li><li data-type='method'><a href="Audrec-modules.utils.html#.isFirefox">isFirefox</a></li><li data-type='method'><a href="Audrec-modules.utils.html#.millisecondsToTime">millisecondsToTime</a></li><li data-type='method'><a href="Audrec-modules.utils.html#.throwError">throwError</a></li><li data-type='method'><a href="Audrec-modules.utils.html#.timeToMilliseconds">timeToMilliseconds</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Pubsub</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="Audrec.html">Audrec</a><a href="Audrec-modules.html">~modules</a>.</span>
+        
+        Pubsub
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Pubsub"><span class="type-signature"></span>new Pubsub<span class="signature">(event_types)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="audrec.js.html">audrec.js</a>, <a href="audrec.js.html#line868">line 868</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Creates a Publisher/Subsciber instance.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event_types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A list of event types to be supported.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(type, eventHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="audrec.js.html">audrec.js</a>, <a href="audrec.js.html#line951">line 951</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Unsubscribes an event handler from a specific event type.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An event type to unsubscribe from.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>eventHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event handler to be unsubscribed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(type, eventHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="audrec.js.html">audrec.js</a>, <a href="audrec.js.html#line911">line 911</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Subscribes an event handler to a specific event type.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An event type to subscibe to ( Note:The event type must be supported. )</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>eventHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An event handler that listens tothe specified event type.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="trigger"><span class="type-signature"></span>trigger<span class="signature">(type, args<span class="signature-attributes">opt</span>, this_value<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="audrec.js.html">audrec.js</a>, <a href="audrec.js.html#line1014">line 1014</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Fires an event.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An event type to be triggered.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>[]</code>
+                
+                </td>
+            
+
+            <td class="description last">An array of arguments to be passed to the eventhandler.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this_value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last">The value of "this" inside the eventhandler.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 18 2018 15:36:02 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
