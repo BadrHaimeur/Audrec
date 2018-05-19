@@ -597,6 +597,22 @@ span.param-type, .params td .param-type, .param-type dd {
   z-index: 1;
 }
 
+.home {
+    text-align: center;
+}
+
+.home > .content {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.home .logo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 680px) {
   body {
     overflow-x: hidden;
